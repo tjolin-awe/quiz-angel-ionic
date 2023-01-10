@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import UIPlugin from 'phaser3-rex-plugins/templates/ui/ui-plugin';
+import RexUIPlugin from 'phaser3-rex-plugins/templates/ui/ui-plugin';
 import { PhaserService } from '../services/phaser.service';
 import Boot from '../scenes/Boot';
 import Preloader from '../scenes/Preloader';
@@ -35,6 +35,9 @@ export class HomePage implements OnInit {
    */
   async init(): Promise<void> {
     const options = {
+      dom: {
+        createContainer: true,
+      },
       physics: {
         default: 'arcade',
         arcade: {
@@ -46,11 +49,12 @@ export class HomePage implements OnInit {
         scene: [
           {
             key: 'rexUI',
-            plugin: UIPlugin,
+            plugin: RexUIPlugin,
             mapping: 'rexUI'
           }
         ],
       },
+      debug: true,
     };
     await PhaserService.init('phaser-game', [Boot, Preloader, MainMenu, Settings, Story, Character, Difficulty, Rank, Game, LevelEnd, Award, EndScene], options);
   }
