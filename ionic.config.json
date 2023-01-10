@@ -1,0 +1,7 @@
+{
+  "name": "QuizAngel",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
