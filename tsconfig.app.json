@@ -5,9 +5,6 @@
     "outDir": "./out-tsc/app",
     "types": []
   },
-  "exclude": [
-    "**/openclosetransition/OpenCloseTransition.ts"
-  ],
   "files": [
     "src/main.ts",
     "src/polyfills.ts"
