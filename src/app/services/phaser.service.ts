@@ -24,9 +24,9 @@ export class PhaserService {
     type: Phaser.AUTO,
     scale: {
       autoCenter: Phaser.Scale.CENTER_BOTH,
-      height: window.innerHeight,
-      mode: Phaser.Scale.RESIZE,
-      width: window.innerWidth,
+      height: 960,
+      mode: Phaser.Scale.FIT,
+      width: 640,
     },
     plugins: {
       global: [],
