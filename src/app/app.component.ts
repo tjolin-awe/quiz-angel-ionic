@@ -1,5 +1,6 @@
 import { Component, OnDestroy } from '@angular/core';
 import { StatusBar } from '@capacitor/status-bar';
+import { SplashScreen } from '@capacitor/splash-screen';
 import { Platform } from '@ionic/angular';
 import { PhaserService } from './services/phaser.service';
 
@@ -11,7 +12,10 @@ import { PhaserService } from './services/phaser.service';
 export class AppComponent implements OnDestroy {
 
   constructor(platform: Platform) {
-    platform.ready().then(() => StatusBar.hide());
+    platform.ready().then(() => {
+      SplashScreen.hide();
+      StatusBar.hide();
+    });
   }
 
   /**
