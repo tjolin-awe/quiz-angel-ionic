@@ -1,4 +1,4 @@
-package io.ionic.starter;
+package com.spiritfilledgames.quizangel;
 
 import com.getcapacitor.BridgeActivity;
 
