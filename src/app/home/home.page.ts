@@ -54,7 +54,7 @@ export class HomePage implements OnInit {
           }
         ],
       },
-      debug: true,
+      debug: false,
     };
     await PhaserService.init('phaser-game', [Boot, Preloader, MainMenu, Settings, Story, Character, Difficulty, Rank, Game, LevelEnd, Award, EndScene], options);
   }
